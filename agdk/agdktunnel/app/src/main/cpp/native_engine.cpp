@@ -133,11 +133,12 @@ NativeEngine::NativeEngine(struct android_app *app) {
 
     // Flags to control how the IME behaves.
     constexpr int InputType_dot_TYPE_CLASS_TEXT = 1;
-    constexpr int IME_ACTION_NONE = 1;
+ //   constexpr int IME_ACTION_NONE = 1;
+    constexpr int IME_ACTION_DONE = 6;
     constexpr int IME_FLAG_NO_FULLSCREEN = 33554432;
 
     GameActivity_setImeEditorInfo(app->activity, InputType_dot_TYPE_CLASS_TEXT,
-                                  IME_ACTION_NONE, IME_FLAG_NO_FULLSCREEN);
+                                  IME_ACTION_DONE, IME_FLAG_NO_FULLSCREEN);
 }
 
 NativeEngine *NativeEngine::GetInstance() {
